@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "sahar-chatbot/dist/react-chatbotify.css";
+import ChatBot from "sahar-chatbot";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <ChatBot position="bottom-right" />{" "}
+      {/* Change the position prop to 'bottom-left', 'top-left' or 'top-right'  */}
+      <div style={{ textAlign: "center", marginTop: "100px" }}>
+        <h2> Hello there! I'm Sahar. </h2>
+        <h3>
+          {" "}
+          This is the interview task for the VideoRepute company for the
+          Front-end dev position
+        </h3>
+        <h4 style={{ color: "green" }}>Instructions:</h4>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Please navigate to the App component (path:src/App.js) and change the
+          position prop of the Chatbot to your liking.<br/> Then click on the chatbot
+          button and send a text to the chatbot!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
